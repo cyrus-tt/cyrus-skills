@@ -1,7 +1,7 @@
 # Cyrus Skills
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-b3854d.svg)](LICENSE)
-[![Skills](https://img.shields.io/badge/skills-1_published-b3854d.svg)](#-skills)
+[![Skills](https://img.shields.io/badge/skills-2_published-b3854d.svg)](#-skills)
 [![RedSkill](https://img.shields.io/badge/小红书-RedSkill-ff2442.svg)](https://www.xiaohongshu.com)
 [![Made with Claude Code](https://img.shields.io/badge/Made_with-Claude_Code-5A67D8.svg)](https://claude.com/claude-code)
 
@@ -18,7 +18,8 @@
 | Skill | 一句话 | 状态 |
 |---|---|---|
 | **[AI 编码 12 步工作流](./cyrus-coding-12steps/SKILL.md)**<br>`cyrus-coding-12steps` | vibe coding 不翻车指南。6 个核心步人人必做，6 个进阶步项目变大再开。逼 AI 把「能用」的证据拿出来，而不是说一句「完成了」 | ✅ 第 1 期已公开 |
-| 自媒体 Skills<br>`cyrus-media-skills` | 选题挖掘 / 写稿 / 过审 / 数据复盘 / 发布追踪 | 🔜 第 2 期打磨中 |
+| **[AI Mirror — 用真实数据蒸馏你自己](./ai-mirror/SKILL.md)**<br>`ai-mirror` | 比 MBTI 准 100 倍。把聊天记录、录音、行为数据喂给 AI，6+1 层框架蒸馏出你的决策逻辑、情绪模式、关系姿态、行为盲区。杀手锏：对比"你说的 vs 你做的"，找出你自己都不知道的说-做差距 | ✅ 第 2 期已公开 |
+| 自媒体 Skills<br>`cyrus-media-skills` | 选题挖掘 / 写稿 / 过审 / 数据复盘 / 发布追踪 | 🔜 第 3 期打磨中 |
 
 ### 12 步速览（cyrus-coding-12steps）
 
@@ -42,14 +43,14 @@
 把 `SKILL.md` 放进你的 Agent skills 目录即可：
 
 ```bash
-# Claude Code
+# AI Mirror（自我认知蒸馏）
+mkdir -p ~/.claude/skills/ai-mirror
+curl -o ~/.claude/skills/ai-mirror/SKILL.md \
+  https://raw.githubusercontent.com/cyrus-tt/cyrus-skills/main/ai-mirror/SKILL.md
+
+# AI 编码 12 步工作流
 mkdir -p ~/.claude/skills/cyrus-coding-12steps
 curl -o ~/.claude/skills/cyrus-coding-12steps/SKILL.md \
-  https://raw.githubusercontent.com/cyrus-tt/cyrus-skills/main/cyrus-coding-12steps/SKILL.md
-
-# Codex / 其他支持 ~/.agents/skills/ 的工具
-mkdir -p ~/.agents/skills/cyrus-coding-12steps
-curl -o ~/.agents/skills/cyrus-coding-12steps/SKILL.md \
   https://raw.githubusercontent.com/cyrus-tt/cyrus-skills/main/cyrus-coding-12steps/SKILL.md
 ```
 
@@ -81,7 +82,8 @@ This is a collection of Agent Skills I **actually use daily**. Every rule comes 
 
 **Skills:**
 
-- **[cyrus-coding-12steps](./cyrus-coding-12steps/SKILL.md)** — A 12-step AI coding workflow that keeps vibe coding from falling apart. 6 core steps for everyone, 6 advanced steps that activate as your project grows. Forces the AI to show *evidence* that things work, instead of just saying "done". *(Currently in Chinese; the workflow concepts translate directly.)*
+- **[ai-mirror](./ai-mirror/SKILL.md)** — Distill yourself from real data. Feed your chat logs, recordings, and behavioral data to AI — get back your decision patterns, emotional triggers, relationship dynamics, and blind spots. The killer feature: Layer 7 "Behavior Audit" compares what you *say* you do vs what you *actually* do. No personality test can do that.
+- **[cyrus-coding-12steps](./cyrus-coding-12steps/SKILL.md)** — A 12-step AI coding workflow that keeps vibe coding from falling apart. 6 core steps for everyone, 6 advanced steps that activate as your project grows. Forces the AI to show *evidence* that things work, instead of just saying "done".
 - **cyrus-media-skills** — Content creation workflow (topic mining / writing / review / analytics). Coming soon.
 
 **Install** — drop `SKILL.md` into your agent's skills directory (`~/.claude/skills/` for Claude Code, `~/.agents/skills/` for Codex and friends, or merge into `.cursorrules` for Cursor).
